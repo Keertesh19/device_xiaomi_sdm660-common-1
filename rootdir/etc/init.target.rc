@@ -431,6 +431,9 @@ on property:init.svc.zygote=restarting
     stop ppd
 
 on property:vendor.post_boot.parsed=1
+    # Enable EAS
+    write /proc/sys/kernel/sched_energy_aware 1
+
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
@@ -440,6 +443,9 @@ on charger
     start vendor.hvdcp_opti
     setprop sys.usb.configfs 1
     start power_off_alarm
+
+    # Enable EAS
+    write /proc/sys/kernel/sched_energy_aware 1
 
 #
 #service nqs /system/bin/nqs

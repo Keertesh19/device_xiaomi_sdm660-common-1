@@ -1,6 +1,7 @@
 type debugfs_rpm, debugfs_type, fs_type;
 type debugfs_wlan, debugfs_type, fs_type;
 type ir_dev_file, file_type;
+type proc_sysctl_sched_energy_aware, proc_type, fs_type;
 type sysfs_touchpanel, fs_type, sysfs_type;
 type sysfs_fingerprint, fs_type, sysfs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
