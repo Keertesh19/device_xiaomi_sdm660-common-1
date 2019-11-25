@@ -391,4 +391,9 @@
 
     <!-- If this is true, device supports Sustained Performance Mode. -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
+    <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
+         specified -->
+    <string name="default_wallpaper_component" translatable="false">com.breel.wallpapers19/com.breel.wallpapers19.doodle.wallpaper.variations.DoodleWallpaperV1</string>
+
 </resources>
