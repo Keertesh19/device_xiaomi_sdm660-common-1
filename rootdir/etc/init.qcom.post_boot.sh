@@ -5343,7 +5343,7 @@ esac
 
 case "$target" in
     "qsd8650a_st1x")
-        mount -t debugfs none /sys/kernel/debug
+        mount -t sysfs none /sys/kernel/debug
     ;;
 esac
 
