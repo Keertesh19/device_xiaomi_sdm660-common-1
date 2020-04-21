@@ -15,12 +15,14 @@ allow vendor_toolbox rootfs:dir r_dir_perms;
 allow vendor_toolbox {
     mnt_vendor_file
     persist_alarm_file
+    persist_audio_file
     persist_block_device
     persist_bluetooth_file
     persist_bms_file
     persist_display_file
     persist_drm_file
     persist_file
+    persist_fingerprint_file
     persist_hvdcp_file
     persist_misc_file
     persist_qti_fp_file
@@ -35,4 +37,17 @@ allow vendor_toolbox {
     sensors_persist_file
     unlabeled
     vendor_persist_mmi_file
-}:dir { r_dir_perms setattr };
+}:dir { r_dir_perms setattr getattr};
+
+allow vendor_toolbox {
+    mnt_vendor_file
+    persist_alarm_file
+    persist_audio_file
+    persist_block_device
+    persist_bluetooth_file
+    persist_bms_file
+    persist_hvdcp_file
+    persist_time_file
+    regionalization_file
+    sensors_persist_file
+}:file { getattr};
